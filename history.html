@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sent Messages
+{% endblock %}
+
+{% block main %}
+    <h1>Your Sent Messages</h1>
+    {% if messages %}
+        <ul class="list-group">
+            {% for message in messages %}
+                <li class="list-group-item">
+                    <strong>To:</strong> {{ message.receiver }}<br>
+                    <strong>Subject:</strong> {{ message.subject }}<br>
+                    <p>{{ message.body }}</p>
+                    <small><em>{{ message.timestamp }}</em></small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No sent messages.</p>
+    {% endif %}
+{% endblock %}

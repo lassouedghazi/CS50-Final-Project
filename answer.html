@@ -1,0 +1,20 @@
+
+{% block title %}
+    Reply to Message
+{% endblock %}
+
+{% block content %}
+    <h1>Reply to Message</h1>
+    <form action="{{ url_for('answer', message_id=message['id']) }}" method="post">
+        <div>
+            <label>To: {{ message.sender }}</label>
+        </div>
+        <div>
+            <label>Subject: Re: {{ message.subject }}</label>
+        </div>
+        <div>
+            <textarea name="body" placeholder="Write your reply here" required></textarea>
+        </div>
+        <button type="submit">Send Reply</button>
+    </form>
+{% endblock %}

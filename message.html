@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View Message
+{% endblock %}
+
+{% block main %}
+    <h1>Message</h1>
+    <p><strong>From:</strong> {{ message.sender }}</p>
+    <p><strong>Subject:</strong> {{ message.subject }}</p>
+    <p>{{ message.body }}</p>
+    <small><em>{{ message.timestamp }}</em></small>
+    <a href="/answer" class="btn btn-primary">Reply</a>
+{% endblock %}
