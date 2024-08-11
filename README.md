@@ -1,5 +1,5 @@
 # Ghazi Lassoued's Messaging Platform
-#### Video Demo:  <https://youtu.be/qIA6cckkHMM?si=t8ExdzjSfduo_MrC>
+#### Video Demo:  
 #### Description:
 
 Overview:
